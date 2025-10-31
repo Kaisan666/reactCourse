@@ -1,19 +1,11 @@
 import React from 'react'
 
-const Greeting = () => {
-
-    const name = "John"
-    const date = new Date()
-    console.log(name);
-    
-    console.log(date);
+const Greeting = ({timeOfDate}) => {
     
 
   return (
-    <div>
-        <h1>{name}</h1>
-        <p>{date.getDate()}</p>
-    </div>
+
+    <div>Good {timeOfDate === "morning" ? "morning" : "afternoon"} !</div>
   )
 }
 
