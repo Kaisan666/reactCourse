@@ -1,15 +1,19 @@
-import React, { useEffect, useState, createContext, useReducer} from 'react'
-import CounterEffect from './components/useEffectStep/CounterEffect'
-import FetchDataEffect from './components/useEffectStep/FetchDataEffect'
-import ComponentA from './components/propsDrilling/ComponentA'
-import UserProfile from './components/contextLesson/UserProfile'
-import UserContext from './components/contextLesson/UserContext'
-import Counter from './components/useReducerLesson/Counter'
-
+import React, { useEffect, useState, createContext, useReducer, useRef} from 'react'
+import useFetch from './components/hooks/useFetch'
+import UniqueId from './components/UniqueId';
 const App = () => {
+  const data = useFetch("https://jsonplaceholder.typicode.com/posts")
+  console.log(data);
+  
   return (
     <>
-     <Counter/>
+    <UniqueId/>
+    <UniqueId/>
+    <UniqueId/>
+    <UniqueId/>
+    <UniqueId/>
+    <UniqueId/>
+    <UniqueId/>
     </>
   )
 }
