@@ -1,17 +1,19 @@
-import React, { useEffect, useState, createContext, useReducer} from 'react'
-import CounterEffect from './components/useEffectStep/CounterEffect'
-import FetchDataEffect from './components/useEffectStep/FetchDataEffect'
-import ComponentA from './components/propsDrilling/ComponentA'
-import UserProfile from './components/contextLesson/UserProfile'
-import UserContext from './components/contextLesson/UserContext'
-import Counter from './components/useReducerLesson/Counter'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import AuthCallback from './components/AuthCallback';
+import Success from './components/Success';
 
-const App = () => {
+function App() {
   return (
-    <>
-     <Counter/>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
+        <Route path="/success" element={<Success />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
